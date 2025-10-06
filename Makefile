@@ -7,19 +7,19 @@ report:
 	./odin report
 
 default:
-	PROGRAM=make ./build_odin.sh # debug
+	PROGRAM=make sh build_odin.sh # debug
 
 debug:
-	./build_odin.sh debug
+	sh build_odin.sh debug
 
 release:
-	./build_odin.sh release
+	sh build_odin.sh release
 
 release-native:
-	./build_odin.sh release-native
+	sh uild_odin.sh release-native
 
 release_native:
-	./build_odin.sh release-native
+	sh build_odin.sh release-native
 
 nightly:
-	./build_odin.sh nightly
+	sh build_odin.sh nightly
