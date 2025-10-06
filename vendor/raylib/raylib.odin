@@ -292,6 +292,7 @@ Camera2D :: struct {
 Mesh :: struct {
 	vertexCount:   c.int,         // Number of vertices stored in arrays
 	triangleCount: c.int,         // Number of triangles stored (indexed or not)
+	name: [128]byte `fmt:"s,0"`,  // Mesh name
 
 	// Default vertex data
 	vertices:   [^]f32,           // Vertex position (XYZ - 3 components per vertex) (shader-location = 0)

@@ -16,9 +16,45 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1759716507,
+        "narHash": "sha256-yD8Q850XvUTkCsJTgzWpI6YNLUPn3Xzj+Ou9zzzy0uQ=",
+        "owner": "nixOS",
+        "repo": "nixpkgs",
+        "rev": "7ba68e6c4e9ee333744b03240d6efbea02088cb1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixOS",
+        "ref": "release-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "raylib": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1759729848,
+        "narHash": "sha256-eUgFb1JCStaJZiQBM/ZzxTLJKgSgHdo80GbI0r94GAE=",
+        "owner": "vkhashimoto",
+        "repo": "raylib",
+        "rev": "6ade32b068b1634c1d8312c4433272db3bb1527d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vkhashimoto",
+        "ref": "mesh-name",
+        "repo": "raylib",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "raylib": "raylib"
       }
     }
   },

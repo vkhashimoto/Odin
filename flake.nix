@@ -3,12 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixOS/nixpkgs/release-25.05";
+    raylib.url = "github:vkhashimoto/raylib/mesh-name";
   };
 
   outputs =
     {
       self,
       nixpkgs,
+      raylib
     }:
     let
       # https://ayats.org/blog/no-flake-utils
@@ -101,6 +103,8 @@
             make -C "$out/share/vendor/cgltf/src/"
             make -C "$out/share/vendor/stb/src/"
             make -C "$out/share/vendor/miniaudio/src/"
+
+            cp ${raylib.packages."x86_64-linux".default}/lib/libraylib.a $out/share/vendor/raylib/linux/
 
             runHook postInstall
           '';
