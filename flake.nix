@@ -108,6 +108,14 @@
 
             runHook postInstall
           '';
+
+          meta = with pkgs.lib; {
+            description = "Odin Programming Language";
+            homepage = "https://github.com/vkhashimoto/Odin";
+            license = licenses.bsd3;
+            maintainers = [ maintainers.vkhashimoto ];
+            platforms = platforms.unix;
+          };
         };
       });
     };
