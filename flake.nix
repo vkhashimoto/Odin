@@ -70,7 +70,7 @@
           buildFlags = [ "release" ];
           buildPhase = ''
             CXX=clang++
-            make -j16
+            make -j16 release
           '';
 
 
